@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Health Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/health-logo.png" alt="Health Tracker Logo" class="logo">
+            <h1>Comprehensive Health Tracker</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Input Panel Section -->
+            <section class="form-section">
+                <h2>Track Your Health Metrics</h2>
+                <form id="health-form">
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="steps">Steps Walked:</label>
+                        <input type="number" id="steps" placeholder="e.g., 10000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calories">Calories Consumed:</label>
+                        <input type="number" id="calories" placeholder="e.g., 2000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sleep">Hours of Sleep:</label>
+                        <input type="number" id="sleep" step="0.1" placeholder="e.g., 7.5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" id="weight" placeholder="e.g., 70" required>
+                    </div>
+
+                    <button type="submit">Save Data</button>
+                </form>
+            </section>
+
+            <!-- BMI Calculator Section -->
+            <section class="bmi-section">
+                <h2>Calculate Your BMI</h2>
+                <form id="bmi-form">
+                    <div class="form-group">
+                        <label for="bmi-weight">Weight (kg):</label>
+                        <input type="number" id="bmi-weight" placeholder="e.g., 70" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bmi-height">Height (cm):</label>
+                        <input type="number" id="bmi-height" placeholder="e.g., 170" required>
+                    </div>
+
+                    <button type="button" id="calculate-bmi">Calculate BMI</button>
+                </form>
+                <p id="bmi-result"></p>
+            </section>
+
+            <!-- Goals Section -->
+            <section class="goals-section">
+                <h2>Your Goals</h2>
+                <div class="goal-card">
+                    <img src="images/steps-icon.png" alt="Steps Icon">
+                    <p>Walk at least 10,000 steps daily</p>
+                </div>
+                <div class="goal-card">
+                    <img src="images/calories-icon.png" alt="Calories Icon">
+                    <p>Maintain calorie intake below 2,000</p>
+                </div>
+                <div class="goal-card">
+                    <img src="images/sleep-icon.png" alt="Sleep Icon">
+                    <p>Get 7-8 hours of quality sleep</p>
+                </div>
+            </section>
+
+            <!-- Records Table Section -->
+            <section class="data-section">
+                <h2>Your Health Records</h2>
+                <div class="table-container">
+                    
+                    <table id="records-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Steps</th>
+                                <th>Calories</th>
+                                <th>Sleep</th>
+                                <th>Weight</th>
+                                <th>BMI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be dynamically inserted -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Graph Section -->
+            <section class="graph-section">
+                <h2>Your Progress</h2>
+                <canvas id="health-chart"></canvas>
+            </section>
+
+            <!-- Inspirational Section -->
+            <section class="inspiration-section">
+                <h2>Stay Motivated</h2>
+                <blockquote>
+                    <p>"The greatest wealth is health."</p>
+                    <footer>- Virgil</footer>
+                </blockquote>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Comprehensive Health Tracker. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
